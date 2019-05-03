@@ -1,4 +1,4 @@
-# ArduinoSensorLibrary (ASL)
+# Arduino Sensor Library (ASL)
 ASL is a library that makes it easier to implement sensors and other components to the [Arduino Uno r3](https://store.arduino.cc/usa/arduino-uno-rev3). This was made to simplify large chuncks of code into something more readable and English for the rest of my team can understand what the arduino code does.
 
 ## Supported Components
