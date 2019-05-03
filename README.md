@@ -2,12 +2,15 @@
 ASL is a library that makes it easier to implement sensors and other components to the [Arduino Uno r3](https://store.arduino.cc/usa/arduino-uno-rev3). This was made to simplify large chuncks of code into something more readable and English for the rest of my team can understand what the arduino code does.
 
 ## Supported Components
-- Hall Effect Sensor UGN3503UA
-- Magnetometer HMC5883L
-- Motor Shield L298P-TWIN
-- Ultrasonic Sensor HC-SR04
-- LEDs
+- [Hall Effect Sensor UGN3503UA](https://www.jaycar.com.au/medias/sys_master/images/9229136101406/ZD1902-dataSheetMain.pdf)
+- [Magnetometer HMC5883L](https://cdn-shop.adafruit.com/datasheets/HMC5883L_3-Axis_Digital_Compass_IC.pdf)
+- [Motor Shield L298P-TWIN](http://image.dfrobot.com/image/data/DRI0009/L298N%20datasheet.pdf)
+- [Ultrasonic Sensor HC-SR04](https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-version-1.pdf)
+- Diodes
 - DC Motors
+
+### Component Notes
+You can use the Diodes object for other things such as transistors and relays or anything that requires 1 selector pin and only has a **On** or **Off** state.
 
 ## How to use?
 1. `git clone https://github.com/lcox74/ArduinoSensorLibrary` into your Arduino library folder, typically found in your Documents folder.
