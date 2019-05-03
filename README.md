@@ -11,8 +11,8 @@ ASL is a library that makes it easier to implement sensors and other components 
 - Inbuilt LED for the Arduino
 
 ### Component Notes
-You can use the Diodes object for other things such as transistors and relays or anything that requires 1 selector pin and only has a **On** or **Off** state.
-Has an inbuilt macro `LOG("message", 1)` where it prints to the serial monitor. The second parameter is either a 1 or 0 where 1 prints a new line and 0 doesn't.
+- You can use the Diodes object for other things such as transistors and relays or anything that requires 1 selector pin and only has a **On** or **Off** state.
+- Has an inbuilt macro `LOG("message", 1)` where it prints to the serial monitor. The second parameter is either a 1 or 0 where 1 prints a new line and 0 doesn't.
 
 ## How to use?
 1. `git clone https://github.com/lcox74/ArduinoSensorLibrary` into your Arduino library folder, typically found in your Documents folder.
