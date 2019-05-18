@@ -8,17 +8,11 @@ public:
 	Diode (byte pin)
 	{
 		pinMode(pin, OUTPUT);
-		this->pin = &pin;
+		this->pin = pin;
 	}
 
-	~Diode () 
-	{
-		pinMode(*this->pin, INPUT);
-		delete this->pin;
-	}
-
-	inline void On () { digitalWrite(*this->pin, HIGH); }
-	inline void Off () { digitalWrite(*this->pin, LOW); }
+	inline void On () { digitalWrite(this->pin, HIGH); }
+	inline void Off () { digitalWrite(this->pin, LOW); }
 	inline void Flash (int n, int wait = 100)
 	{
 		for (int i = 0; i < n; ++i)
@@ -28,16 +22,16 @@ public:
 		}
 	}
 
-	int getPin () { return *this->pin; }
+	int getPin () { return this->pin; }
 	void setPin (byte pin)
 	{ 
-		pinMode(*this->pin, INPUT); 
+		pinMode(this->pin, INPUT); 
 		pinMode(pin, OUTPUT);
-		this->pin = &pin;
+		this->pin = pin;
 	}
 
 private:
-	byte *pin;
+	byte pin;
 };
 
 #endif //ASL_DIODE_H_

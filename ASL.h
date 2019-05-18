@@ -9,7 +9,10 @@
 	#error ASL only supports Arduino!
 #endif //ARDUINO
 
+#include <math.h>
+
 // ------------- MATH ------------- 
+
 #define LERP(start, end, t) ((1 - t) * start + end * t)
 #define CLAMP(min, max, value) ((value >= max) ? max : ((value <= min) ? min : value))
 

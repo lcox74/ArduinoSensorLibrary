@@ -20,6 +20,16 @@ public:
 		return Vector3(x / m, y / m, z / m); 
 	}
 
+	Vector3 lerp (Vector3 a, Vector3 b, float t) 
+	{
+		return Vector3(LERP(a.x, b.x, t), LERP(a.y, b.y, t), LERP(a.z, b.z, t));
+	}
+	Vector3 slerp (Vector3 a, Vector3 b, float t) 
+	{
+		float theta = acos(a.dot(b));
+		return ( a * (float)(sin((1 - t) * theta) / sin(theta)) + b * (float)(sin(t * theta) / sin(theta)) );
+	}
+
 	inline Vector3 operator+ (Vector3 b) 	{ return Vector3(x + b.x, y + b.y, z + b.z); }
 	inline Vector3 operator- (Vector3 b) 	{ return Vector3(x - b.x, y - b.y, z - b.z); }
 	inline Vector3 operator* (float v)		{ return Vector3(x * v, y * v, z * v); }
