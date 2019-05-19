@@ -7,7 +7,7 @@
 class Motor_DC
 {
 public:
-	Motor_DC ();
+	Motor_DC () { }
 	Motor_DC (byte s, byte dir) 
 	{
 		pinMode(s, OUTPUT); 	this->speed = s;

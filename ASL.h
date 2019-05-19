@@ -18,6 +18,10 @@
 
 #include "Math/Vector3.h"
 
+// ------------- Muic -------------
+
+#include "Speaker/Notes.h"
+
 // ------------- DEBUGGING ------------- 
 #define LOG(s, newLine) Serial.begin(9600); if (newLine) Serial.println(s); else Serial.print(s)
 
@@ -28,6 +32,7 @@
 
 // ------------- COMPONENTS ------------- 
 #include "Diode/Diode.h"
+#include "Button/Button.h"
 #include "Motor/Motor_DC.h"
 #include "Magnetometer/Magnetometer_HMC5883L.h"
 #include "HallEffect/HallEffect_UGN3503UA.h"
