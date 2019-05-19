@@ -10,7 +10,7 @@ public:
 		this->pin = pin;
 	}
 
-	bool getState (bool invert = false) { return (digitalRead(this->pin) == 1 && invert) ? false : true; }
+	int getState () { return (digitalRead(this->pin) == 1) ? 0 : 1; }
 
 	byte getPin () { return this->pin; }
 	void setPin (byte pin) 

@@ -20,6 +20,13 @@ public:
 		return Vector3(x / m, y / m, z / m); 
 	}
 
+	float angle (Vector3 a) 
+	{
+		float dot = a.dot(*this);
+		float mag = magnitude() * a.magnitude();
+		return acosf(dot / mag);
+	}
+
 	Vector3 Lerp (Vector3 a, Vector3 b, float t) 
 	{
 		return Vector3(LERP(a.x, b.x, t), LERP(a.y, b.y, t), LERP(a.z, b.z, t));
