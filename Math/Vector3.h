@@ -20,13 +20,24 @@ public:
 		return Vector3(x / m, y / m, z / m); 
 	}
 
-	Vector3 lerp (Vector3 a, Vector3 b, float t) 
+	Vector3 Lerp (Vector3 a, Vector3 b, float t) 
 	{
 		return Vector3(LERP(a.x, b.x, t), LERP(a.y, b.y, t), LERP(a.z, b.z, t));
 	}
-	Vector3 slerp (Vector3 a, Vector3 b, float t) 
+	Vector3 Slerp (Vector3 a, Vector3 b, float t) 
 	{
-		float theta = acos(a.dot(b));
+		float dot = a.dot(b);
+
+		if (dot < 0.0f)
+		{
+			dot = -dot;
+			b = b * -1;
+		}
+		if (dot > 0.9995f)
+			return Lerp(a, b, t);;
+
+		float theta = acosf(dot);
+		Serial.println(theta);
 		return ( a * (float)(sin((1 - t) * theta) / sin(theta)) + b * (float)(sin(t * theta) / sin(theta)) );
 	}
 
