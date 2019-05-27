@@ -158,7 +158,7 @@
 /*
 Note Value
 
-Note duration (ms) = Temp / Note Value
+Note duration (in milliseconds) = Temp / Note Value
  */
 #define OCTUPLE_NOTE                    0.125
 #define QUADRUPLE_NOTE                  0.25
@@ -178,7 +178,6 @@ Tempo
 The tempo is calculated by the milliseconds for a whole note.
 
 Value = (60,000 / (tempo bpm)) * 4
-
  */
 #define LARGHISSIMO 20000
 #define ADAGISSIMO 10000
@@ -203,4 +202,4 @@ Value = (60,000 / (tempo bpm)) * 4
 #define PRESTO 1304
 #define PRESTISSIMO 1200
 
-#endif ASL_NOTES_H_
+#endif // ASL_NOTES_H_
