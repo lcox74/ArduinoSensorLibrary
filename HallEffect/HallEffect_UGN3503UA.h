@@ -44,7 +44,7 @@ public:
 	been set yet then return -1.
 	Returns: The pin location.
 	 */
-	byte getPin () { (this->componentSet) ? return pin : -1; }
+	byte getPin () { return (this->componentSet) ? pin : -1; }
 
 	/*
 	Set the components pin location. If it is less 

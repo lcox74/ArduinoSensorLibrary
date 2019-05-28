@@ -63,7 +63,7 @@ public:
 	inline void Backward (float s)	{ setDirection(BACKWARD); setSpeed(s); }
 
 	// Get the speed pin for this motor. -1 if not set.
-	byte getSpeed () { (this->componentSet) ? return this->speed : -1; }
+	byte getSpeed () { return (this->componentSet) ? this->speed : -1; }
 
 	/*
 	Set the speed I/O pin for the motor.
@@ -99,7 +99,7 @@ public:
 	}
 
 	// Get the speed pin for this motor. -1 if not set.
-	byte getDirection () { return this->direction; }
+	byte getDirection () { return (this->componentSet) ? this->direction : -1; }
 
 	/*
 	Set the direction I/O pin for the motor.

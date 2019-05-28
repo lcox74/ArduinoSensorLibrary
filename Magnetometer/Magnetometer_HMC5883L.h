@@ -52,9 +52,6 @@ public:
 		Wire.write(0x09); // Set to continuously measure
 		Wire.write(0x1D); // Set register B
 		Wire.endTransmission();
-
-		// Create an offset
-    	offset = heading();
 	}
 
 	/*
